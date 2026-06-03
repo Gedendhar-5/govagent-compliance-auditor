@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  govagent:
+    build: .
+    container_name: govagent-auditor
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data           # Persist FAISS index
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_SERVER_HEADLESS=true

@@ -1,0 +1,22 @@
+# Environment variables (Crucial: keeps your API keys secret!)
+.env
+
+# Python caching
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local vector store data
+data/faiss_index/
+data/
+
+# PDF reports
+*.pdf
+
+# IDE and Editor configuration files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
